@@ -1,82 +1,81 @@
-/* body {
-  margin: 40px;
-} */
+body {
+  font-family: arial;
+  margin: 0;
+}
 
-.column1 {
-  grid-area: column1;
+.header-text{
+  display: none;
+}
+
+header {
+  grid-column: span 3;
+  background-color: #369;
+  color: white; 
+}
+
+#nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #575757;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #383838;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@media (min-width: 800px) {
+  .container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: auto 1fr auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header-text{
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+    font-size: xx-large;
+    display: initial;
+    background: none;
+    color: #ffff;
+    margin-left: 16%;
+  }
 }
 
 .column2 {
-  grid-area: column2;
+  flex: 1;
+  padding: 20px;
+}
+ 
+.column1, .column3 {
+  padding: 20px;
+  background-color: #c5c5c5;
 }
 
-.column3 {
-  grid-area: column3;
-}
-
-.content {
-  grid-area: content;
-  position: relative;
-}
-
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-areas:
-    "header  header  header"
-    "column1 column2 column3"
-    "footer  footer  footer";
-    background-color: #fff;
-    color: #444;
-  }
-
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 50px;
-  font-size: 150%;
-}
-
-.header,
-.footer {
-  background-color: #999;
-}
-
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.topright {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.bottomright {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
 
 #email-icon{
-  color: #6b6b6b;
+  color: #575757;
   margin-right: 30px;
 }
 #twitter-icon{
@@ -98,3 +97,53 @@
   display: flex;
   justify-content: center;
 }
+
+h1 {
+  margin-bottom: 1em;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+img{
+  width: 450px;
+} 
+
+footer {
+  grid-column: span 3;
+  padding: 30px;
+  text-align: center;
+  font-size: 1.4em;
+  background-color: #ffffff;
+  color: white;
+}
+
+.outer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+  width: 180%;
+}
+.inner-grid {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+.inner-grid img {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 800px) {
+  .inner-grid {
+     flex: 100%;
+     max-width: 100%;
+  }
+
+  .outer-grid{
+    width: 100%;
+  }
+}
+
+
+
