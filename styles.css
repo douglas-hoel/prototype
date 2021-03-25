@@ -1,0 +1,100 @@
+/* body {
+  margin: 40px;
+} */
+
+.column1 {
+  grid-area: column1;
+}
+
+.column2 {
+  grid-area: column2;
+}
+
+.column3 {
+  grid-area: column3;
+}
+
+.content {
+  grid-area: content;
+  position: relative;
+}
+
+.header {
+  grid-area: header;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-areas:
+    "header  header  header"
+    "column1 column2 column3"
+    "footer  footer  footer";
+    background-color: #fff;
+    color: #444;
+  }
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+  font-size: 150%;
+}
+
+.header,
+.footer {
+  background-color: #999;
+}
+
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.topright {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#email-icon{
+  color: #6b6b6b;
+  margin-right: 30px;
+}
+#twitter-icon{
+  color: #56b2e7;
+  margin-right: 30px;
+} 
+
+#facebook-icon{
+  color: #4560fa;
+  margin-right: 30px;
+}
+
+#instagram-icon{
+  color: #df4242;
+  margin-right: 30px;
+}
+
+.footer-icons{
+  display: flex;
+  justify-content: center;
+}
